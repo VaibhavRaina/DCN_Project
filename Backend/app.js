@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const dbUrl = 'mongodb://localhost:27017/fromData';
+const dbUrl = 'mongodb://localhost:27017/test';
 const Form = require("./models/Form");
 mongoose.connect(dbUrl);
 
@@ -48,3 +48,4 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Serving on port ${PORT}`);
 });
+

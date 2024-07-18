@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
-
+const Schema = mongoose.Schema
 const formSchema = new mongoose.Schema({
     userId: {
         type: String,
-        required: true // Assuming you have some identifier for users
+        required: true
     },
     name: {
+        // type: Schema.Types.Mixed,
         type: String,
         required: true
     },
@@ -17,20 +18,21 @@ const formSchema = new mongoose.Schema({
     phoneNumber: {
         type: String,
         required: true
-        // You can add validation for phone number format if needed
+
     },
     description: {
         type: String,
+        // type: Schema.Types.Mixed,
         required: true
     },
     userType: {
         type: String,
-        enum: ['individual', 'organization'], // Assuming these are the only two options
+        enum: ['individual', 'organization'],
         required: true
     },
     bookingReason: {
         type: String,
-        enum: ['parking', 'function', 'other'], // Assuming these are the only options
+        enum: ['parking', 'function', 'other'],
         required: true
     },
     agreeToContact: {
